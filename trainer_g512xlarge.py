@@ -326,7 +326,67 @@ def main_worker(rank, world_size, config, args):
                 }
                 
                 # Save checkpoint and upload to S3
-                # [Keep your existing S3 upload code here, but only for rank 0]
+                checkpoint_name = f"checkpoint-epoch-{epoch}-train_acc-{train_metrics['accuracy']:.2f}-test_acc-{test_metrics['accuracy']:.2f}-train_acc5-{train_metrics['accuracy_top5']:.2f}-test_acc5-{test_metrics['accuracy_top5']:.2f}.pth"
+                checkpoint_path = os.path.join("checkpoints", config.name, checkpoint_name)
+                
+                # Create checkpoint directory if it doesn't exist
+                os.makedirs(os.path.dirname(checkpoint_path), exist_ok=True)
+                
+                # Save checkpoint locally
+                logger.info(f"Saving checkpoint to {checkpoint_path}")
+                torch.save(checkpoint, checkpoint_path)
+
+                # Compress checkpoint before uploading
+                import gzip
+                compressed_path = checkpoint_path + '.gz'
+                with open(checkpoint_path, 'rb') as f_in:
+                    with gzip.open(compressed_path, 'wb') as f_out:
+                        f_out.write(f_in.read())
+                
+                # Upload compressed checkpoint with progress tracking
+                logger.info(f"Starting upload of checkpoint ({os.path.getsize(compressed_path)/1024/1024:.2f} MB)")
+                try:
+                    s3_uri = upload_file_to_s3(
+                        compressed_path,
+                        bucket_name='resnet-1000',
+                        s3_prefix='imagenet1K_epoch_/epoch_'+str(epoch)
+                    )
+                    logger.info(f"Model checkpoint upload completed:")
+                except Exception as e:
+                    logger.error(f"Failed to upload checkpoint to S3: {str(e)}")
+                    raise
+
+                # Upload logs
+                for log_name, prefix in [
+                    ('training_log.csv', 'imagenet1K-csv-train-logs'),
+                    ('test_log.csv', 'imagenet1K-csv-test-logs')
+                ]:
+                    try:
+                        log_path = os.path.join("logs", config.name, 'csv_logger', log_name)
+                        s3_uri = upload_file_to_s3(
+                            log_path,
+                            bucket_name='resnet-1000',
+                            s3_prefix=prefix+'/epoch_'+str(epoch)
+                        )
+                        logger.info(f"{log_name} upload completed: ")
+                    except Exception as e:
+                        logger.error(f"Failed to upload {log_name} to S3: {str(e)}")
+                        raise
+
+                # Upload app logs
+                try:
+                    log_filepath = os.path.join("logs", config.name, "app_logs", "training_apps.log")
+                    s3_uri = upload_file_to_s3(
+                        log_filepath,
+                        bucket_name='resnet-1000',
+                        s3_prefix='log_handler/epoch_'+str(epoch)
+                    )
+                    logger.info(f"Log file upload completed: {s3_uri}")
+                except Exception as e:
+                    logger.error(f"Failed to upload log file to S3: {str(e)}")
+                    raise
+
+                logger.info(f"All uploads completed successfully for epoch {epoch}")
                 
             test_metrics = test(rank, val_loader, model, loss_fn, epoch + 1, writer,
                               train_dataloader=train_loader, csv_logger=csv_logger, calc_acc5=True)
