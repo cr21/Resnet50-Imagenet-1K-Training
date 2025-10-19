@@ -58,18 +58,18 @@ def train(rank, dataloader, model, loss_fn, optimizer, scheduler, epoch, writer,
         progress_bar = tqdm(enumerate(dataloader), total=len(dataloader), desc=f"Epoch {epoch+1}")
     else:
         progress_bar = enumerate(dataloader)
-
+    optimizer.zero_grad(set_to_none=True)
     for batch, (X, y) in progress_bar:
         X, y = X.cuda(rank), y.cuda(rank)
 
-        with autocast():
+        with torch.amp.autocast("cuda"):
             pred = model(X)
             loss = loss_fn(pred, y)
         
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
-        optimizer.zero_grad()
+        #optimizer.zero_grad()
 
         scheduler.step()
 
@@ -141,7 +141,7 @@ def test(rank, dataloader, model, loss_fn, epoch, writer, train_dataloader, csv_
         progress_bar = dataloader
 
     with torch.no_grad():
-        with autocast():
+        with torch.amp.autocast("cuda"):
             for X, y in progress_bar:
                 X, y = X.cuda(rank), y.cuda(rank)
                 pred = model(X)
@@ -235,7 +235,8 @@ def main_worker(rank, world_size, config, args):
             batch_size=config.batch_size,
             sampler=train_sampler,
             num_workers=config.workers,
-            pin_memory=True
+            pin_memory=True,
+            persistent_workers=True
         )
 
         val_transformation = transforms.Compose([
@@ -272,7 +273,7 @@ def main_worker(rank, world_size, config, args):
                                   momentum=config.momentum,
                                   weight_decay=config.weight_decay)
 
-        scaler = GradScaler()
+        scaler = torch.amp.GradScaler("cuda")
         
         steps_per_epoch = len(train_loader)
         total_steps = config.epochs * steps_per_epoch
