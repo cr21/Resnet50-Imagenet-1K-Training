@@ -8,7 +8,7 @@ from typing import Optional, Union
 class GradioConfig:
     IMG_W: int = 224
     IMG_H: int = 224
-    device: str = 'cpu'
+    device: str = 'cuda'
     model_dir: str = "traced_models"
     model_file_name : str = "resnet50_imagenet_1k_model.pt"
     labels_path : str = 'imagenet_classes.txt'
@@ -32,8 +32,8 @@ class Config:
         self.pct_start = 0.3
         self.div_factor = 25.0
         self.final_div_factor = 1e4
-        self.train_folder_name =   '/mnt/data/imagenetdata/train'
-        self.val_folder_name =   '/mnt/data/imagenetdata/val'
+        self.train_folder_name =   '/mnt/data/imagenet/train'
+        self.val_folder_name =   '/mnt/data/imagenet/val'
 
     def __repr__(self):
         return str(self.__dict__)
