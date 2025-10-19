@@ -354,7 +354,7 @@ def main_worker(rank, world_size, config, args):
                 try:
                     s3_uri = upload_file_to_s3(
                         compressed_path,
-                        bucket_name='resnet-1000',
+                        bucket_name='resnet-1k-oct-25',
                         s3_prefix='imagenet1K_epoch_/epoch_'+str(epoch)
                     )
                     logger.info(f"Model checkpoint upload completed:")
@@ -371,7 +371,7 @@ def main_worker(rank, world_size, config, args):
                         log_path = os.path.join("logs", config.name, 'csv_logger', log_name)
                         s3_uri = upload_file_to_s3(
                             log_path,
-                            bucket_name='resnet-1000',
+                            bucket_name='resnet-1k-oct-25',
                             s3_prefix=prefix+'/epoch_'+str(epoch)
                         )
                         logger.info(f"{log_name} upload completed: ")
@@ -384,7 +384,7 @@ def main_worker(rank, world_size, config, args):
                     log_filepath = os.path.join("logs", config.name, "app_logs", "training_apps.log")
                     s3_uri = upload_file_to_s3(
                         log_filepath,
-                        bucket_name='resnet-1000',
+                        bucket_name='resnet-1k-oct-25',
                         s3_prefix='log_handler/epoch_'+str(epoch)
                     )
                     logger.info(f"Log file upload completed: {s3_uri}")

@@ -35,10 +35,10 @@ class Config:
         self.batch_size =  384
         self.name = "resnet50_imagenet_1k_onecycleLr"
         self.workers = 12
-        self.max_lr = 0.175
+        self.max_lr = 0.18525#0.175
         self.momentum = 0.9
         self.weight_decay = 1e-4
-        self.epochs = 50
+        self.epochs = 60
         self.pct_start = 0.3
         self.div_factor = 25.0
         self.final_div_factor = 1e4
