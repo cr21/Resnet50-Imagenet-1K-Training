@@ -210,7 +210,10 @@ def main_worker(rank, world_size, config, args):
             logger = logging.getLogger(__name__)
             logger.setLevel(logging.INFO)
             logger.addHandler(file_handler)
-        
+        else:
+            logger = logging.getLogger(f"rank_{rank}")
+            logger.addHandler(logging.NullHandler())
+            logger.info(f"Rank {rank} initialized logger")
         # Create metric logger
         log_dir = os.path.join("logs", config.name, 'csv_logger')
         csv_logger = CSVLogger(log_dir) if rank == 0 else None
@@ -264,7 +267,8 @@ def main_worker(rank, world_size, config, args):
         torch.cuda.set_device(rank)
         
         num_classes = len(train_dataset.classes)
-        model = ResNet50Wrapper(num_classes=num_classes).cuda(rank)
+        model = ResNet50Wrapper(num_classes=num_classes, use_checkpoint=True).cuda(rank)
+        model.compile(mode="max-autotune")
         model = DDP(model, device_ids=[rank])
 
         loss_fn = nn.CrossEntropyLoss()
