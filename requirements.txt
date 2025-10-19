@@ -1,0 +1,13 @@
+# if we use pytorch environment on AWS G4dn or G5 or p g6 instances,
+# pytorch environment is already installed and we can use it directly.
+# if not use this
+torch
+torchvision
+torchaudio
+pandas
+numpy==1.26.1
+matplotlib
+scikit-learn
+scipy
+tqdm
+boto3
