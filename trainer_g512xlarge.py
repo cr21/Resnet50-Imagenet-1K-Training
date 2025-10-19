@@ -46,7 +46,7 @@ def cleanup():
     dist.destroy_process_group()
 
 def train(rank, dataloader, model, loss_fn, optimizer, scheduler, epoch, writer, scaler, csv_logger):
-    logger.info(f"[Train Stage] Epoch {epoch+1} Stage : Training STARTS")
+    print(f"[Train Stage] Epoch {epoch+1} Stage : Training STARTS")
     size = len(dataloader.dataset)
     model.train()
     start0 = time.time()
@@ -197,24 +197,20 @@ def main_worker(rank, world_size, config, args):
         # Wait for rank 0 to create directories
         dist.barrier()
 
-        # Set up logging only for rank 0
-        if rank == 0:
-            log_filename = f"training_apps.log"
-            log_filepath = os.path.join("logs", config.name, "app_logs", log_filename)
-            
-            file_handler = logging.FileHandler(log_filepath)
-            file_handler.setLevel(logging.INFO)
-            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', 
-                                    datefmt='%Y-%m-%d %H:%M:%S')
-            file_handler.setFormatter(formatter)
-            
-            logger = logging.getLogger(__name__)
-            logger.setLevel(logging.INFO)
-            logger.addHandler(file_handler)
-        else:
-            logger = logging.getLogger(f"rank_{rank}")
-            logger.addHandler(logging.NullHandler())
-            logger.info(f"Rank {rank} initialized logger")
+        # Set up logging for all ranks
+        log_filename = f"training_apps_rank_{rank}.log"
+        log_filepath = os.path.join("logs", config.name, "app_logs", log_filename)
+        
+        file_handler = logging.FileHandler(log_filepath)
+        file_handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', 
+                                datefmt='%Y-%m-%d %H:%M:%S')
+        file_handler.setFormatter(formatter)
+        
+        logger = logging.getLogger(f"rank_{rank}")
+        logger.setLevel(logging.INFO)
+        logger.addHandler(file_handler)
+        logger.info(f"Rank {rank} initialized logger")
         # Create metric logger
         log_dir = os.path.join("logs", config.name, 'csv_logger')
         csv_logger = CSVLogger(log_dir) if rank == 0 else None
@@ -268,7 +264,7 @@ def main_worker(rank, world_size, config, args):
         torch.cuda.set_device(rank)
         
         num_classes = len(train_dataset.classes)
-        model = ResNet50Wrapper(num_classes=num_classes, use_checkpoint=True).cuda(rank)
+        model = ResNet50Wrapper(num_classes=num_classes, use_checkpoint=False).cuda(rank)
         model.compile(mode="max-autotune")
         model = DDP(model, device_ids=[rank])
 
