@@ -17,7 +17,7 @@ from torch.cuda.amp import autocast, GradScaler
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
 
-def find_lr(start_lr=1e-6, end_lr=1, num_iter=1000, output_dir="lr_finder_plots"):
+def find_lr(start_lr=1e-6, end_lr=1, num_iter=500, output_dir="lr_finder_plots"):
     config = Config()
     print(f"🔍 Finding LR with Start={start_lr}, End={end_lr}, Num_iter={num_iter}")
 

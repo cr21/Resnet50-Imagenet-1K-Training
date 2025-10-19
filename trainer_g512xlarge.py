@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore')
 import os
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import argparse
 import time
 from math import sqrt
@@ -58,10 +59,10 @@ def train(rank, dataloader, model, loss_fn, optimizer, scheduler, epoch, writer,
         progress_bar = tqdm(enumerate(dataloader), total=len(dataloader), desc=f"Epoch {epoch+1}")
     else:
         progress_bar = enumerate(dataloader)
-    optimizer.zero_grad(set_to_none=True)
+    
     for batch, (X, y) in progress_bar:
-        X, y = X.cuda(rank), y.cuda(rank)
-
+        X, y = X.cuda(rank,memory_format=torch.channels_last, non_blocking=True), y.cuda(rank, non_blocking=True)
+        optimizer.zero_grad(set_to_none=True)
         with torch.amp.autocast("cuda"):
             pred = model(X)
             loss = loss_fn(pred, y)
