@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import os
 
-def find_lr(start_lr=1e-7, end_lr=10, num_iter=100, output_dir='lr_finder_plots'):
+def find_lr(start_lr=1e-7, end_lr=10, num_iter=200, output_dir='lr_finder_plots'):
     config = Config()
     print(f"Find LR with params: Start_lr: {start_lr}, End_lr: {end_lr}, Num_iter: {num_iter}")
     device = (
@@ -46,6 +46,8 @@ def find_lr(start_lr=1e-7, end_lr=10, num_iter=100, output_dir='lr_finder_plots'
     )
 
     model = ResNet50Wrapper(num_classes=len(train_dataset.classes)).to(device)
+    model.use_gradient_checkpointing()  # Enable gradient checkpointing
+    model = torch.compile(model, mode="reduce-overhead")  # Enable torch.compile
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(
         model.parameters(), 

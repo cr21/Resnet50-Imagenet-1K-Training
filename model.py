@@ -1,5 +1,4 @@
 import torch.nn as nn
-import torch.nn as nn
 import torchvision.models as models
 
 class ResNet50Wrapper(nn.Module):
@@ -10,3 +9,7 @@ class ResNet50Wrapper(nn.Module):
 
     def forward(self, x):
         return self.model(x)
+        
+    def use_gradient_checkpointing(self):
+        self.model.train()
+        self.model.gradient_checkpointing_enable()
