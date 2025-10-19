@@ -45,7 +45,7 @@ def setup(rank, world_size):
 def cleanup():
     dist.destroy_process_group()
 
-def train(rank, dataloader, model, loss_fn, optimizer, scheduler, epoch, writer, scaler, csv_logger):
+def train(rank, dataloader, model, loss_fn, optimizer, scheduler, epoch, writer, scaler, csv_logger, logger):
     print(f"[Train Stage] Epoch {epoch+1} Stage : Training STARTS")
     size = len(dataloader.dataset)
     model.train()
@@ -128,7 +128,7 @@ def train(rank, dataloader, model, loss_fn, optimizer, scheduler, epoch, writer,
         logger.info(f"[Train Stage] Epoch {epoch+1} - Loss: {avg_loss:.4f}, Acc: {accuracy:.3f}%, Top-5 Acc: {accuracy_top5:.3f}%, Time: {epoch_time:.2f}s LR: {optimizer.param_groups[0]['lr']:.7f}")
     return metrics if rank == 0 else None
 
-def test(rank, dataloader, model, loss_fn, epoch, writer, train_dataloader, csv_logger, calc_acc5=True):
+def test(rank, dataloader, model, loss_fn, epoch, writer, train_dataloader, csv_logger, calc_acc5=True, logger=None):
     logger.info(f"[Test Stage] Epoch {epoch+1} Stage : Testing STARTS")
     model.eval()
     test_loss = 0
@@ -265,7 +265,7 @@ def main_worker(rank, world_size, config, args):
         
         num_classes = len(train_dataset.classes)
         model = ResNet50Wrapper(num_classes=num_classes, use_checkpoint=False).cuda(rank)
-        model.compile(mode="max-autotune")
+        model.compile()
         model = DDP(model, device_ids=[rank])
 
         loss_fn = nn.CrossEntropyLoss()
@@ -301,8 +301,8 @@ def main_worker(rank, world_size, config, args):
             scaler.load_state_dict(checkpoint["scaler"])
 
         writer = None
-        test(rank, val_loader, model, loss_fn, epoch=0, writer=writer, 
-             train_dataloader=train_loader, csv_logger=csv_logger, calc_acc5=True)
+        # test_metrics = test(rank, val_loader, model, loss_fn, epoch=0, writer=writer, 
+        #                     train_dataloader=train_loader, csv_logger=csv_logger, calc_acc5=True, logger=logger)
 
         if rank == 0:
             logger.info(f"Starting training from epoch {start_epoch}")
@@ -315,8 +315,10 @@ def main_worker(rank, world_size, config, args):
                 logger.info(f"Current Epoch {epoch}")
             
             train_metrics = train(rank, train_loader, model, loss_fn, optimizer, scheduler, 
-                                epoch=epoch, writer=writer, scaler=scaler, csv_logger=csv_logger)
-            
+                                epoch=epoch, writer=writer, scaler=scaler, csv_logger=csv_logger, logger=logger)
+            test_metrics = test(rank, val_loader, model, loss_fn, epoch + 1, writer,
+                              train_dataloader=train_loader, csv_logger=csv_logger, calc_acc5=True, logger=logger)
+
             if rank == 0:
                 checkpoint = {
                     "model": model.module.state_dict(),
@@ -390,9 +392,7 @@ def main_worker(rank, world_size, config, args):
 
                 logger.info(f"All uploads completed successfully for epoch {epoch}")
                 
-            test_metrics = test(rank, val_loader, model, loss_fn, epoch + 1, writer,
-                              train_dataloader=train_loader, csv_logger=csv_logger, calc_acc5=True)
-
+            
     except Exception as e:
         print(f"Error in rank {rank}: {str(e)}")
         raise e

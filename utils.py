@@ -32,7 +32,7 @@ class DeploymentConfig:
 
 class Config:
     def __init__(self):
-        self.batch_size =  384
+        self.batch_size =  448
         self.name = "resnet50_imagenet_1k_onecycleLr"
         self.workers = 12
         self.max_lr = 0.18525#0.175
