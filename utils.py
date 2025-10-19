@@ -34,6 +34,8 @@ class Config:
         self.final_div_factor = 1e4
         self.train_folder_name =   '/mnt/data/imagenet/train'
         self.val_folder_name =   '/mnt/data/imagenet/val'
+        self.IMG_W = 224
+        self.IMG_H = 224
 
     def __repr__(self):
         return str(self.__dict__)
