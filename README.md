@@ -109,9 +109,16 @@ aws ec2 terminate-instances --instance-ids i-xxxxxx --region us-east-1
 # note down instance id
 # attach the volume to the instance
 # g5.8xlarge instance type has 1 GPU 24 GB RAM, 32 vCPUs, 128 GB CPU RAM, 1 * NVIDIA A10G Tensor Core GPUs
+aws ec2 create-volume \
+    --snapshot-id snap-xxxx \
+    --volume-type gp3 \
+    --size 420 \
+    --availability-zone us-east-1c \
+    --tag-specifications 'ResourceType=volume,Tags=[{Key=Name,Value=ImageNet-Data}]'
+
 aws ec2 attach-volume \
-    --volume-id $VOLUME_ID \
-    --instance-id $INSTANCE_ID \
+    --volume-id vol-xxx \
+    --instance-id i-xxx \
     --device /dev/xvdf
 # ssh into the instance
 DEVICE_NAME=$(lsblk -o NAME,MOUNTPOINT | grep -v 'MOUNTPOINT' | grep -E 'nvme|xvd' | awk '{print "/dev/"$1}' | tail -n1)
