@@ -4,6 +4,16 @@ import time
 import boto3
 from pathlib import Path
 from typing import Optional, Union
+import torch
+# Add after the existing Config class
+
+class AMPConfig:
+    def __init__(self):
+        self.enabled = True  # Enable AMP by default on supported devices
+        self.dtype = torch.float16  # Use float16 for AMP
+        self.cast_model_type = torch.float32  # Keep model in float32
+        self.cast_params_type = torch.float32  # Keep parameters in float32
+        self.device_type = 'cuda'  # Specify device type for autocast
 
 class GradioConfig:
     IMG_W: int = 224
@@ -22,7 +32,7 @@ class DeploymentConfig:
 
 class Config:
     def __init__(self):
-        self.batch_size =  448
+        self.batch_size =  320
         self.name = "resnet50_imagenet_1k_onecycleLr"
         self.workers = 12
         self.max_lr = 0.175
