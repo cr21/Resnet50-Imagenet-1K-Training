@@ -44,6 +44,11 @@ aws ec2 attach-volume \
     --instance-id i-xxxx \
     --device /dev/sdf
 
+aws ec2 attach-volume \
+    --volume-id vol-012625c007b625251 \
+    --instance-id i-03c363f9ddd8ea3ec \
+    --device /dev/sdf
+
 # 3. Create filesystem
 # (sudo mkfs -t ext4 /dev/xvdf)
 sudo mkfs -t ext4 /dev/nvme1n1 

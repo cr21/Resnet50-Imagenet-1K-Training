@@ -293,12 +293,14 @@ def main_worker(rank, world_size, config, args):
             if rank == 0:
                 logger.info("Resuming training from checkpoint")
             map_location = {'cuda:%d' % 0: 'cuda:%d' % rank}
-            checkpoint = torch.load(args.checkpoint_path, map_location=map_location)
+            checkpoint = torch.load(args.checkpoint_path, map_location=map_location, weights_only=False)
             model.module.load_state_dict(checkpoint["model"])
             start_epoch = checkpoint["epoch"] + 1
             optimizer.load_state_dict(checkpoint["optimizer"])
             scheduler.load_state_dict(checkpoint["scheduler"])
             scaler.load_state_dict(checkpoint["scaler"])
+            # config = checkpoint["config"]
+            # config['batch_size'] = 320
 
         writer = None
         # test_metrics = test(rank, val_loader, model, loss_fn, epoch=0, writer=writer, 
@@ -307,7 +309,7 @@ def main_worker(rank, world_size, config, args):
         if rank == 0:
             logger.info(f"Starting training from epoch {start_epoch}")
 
-        for epoch in range(start_epoch, config.epochs):
+        for epoch in range(start_epoch, config.epochs+12):
             train_sampler.set_epoch(epoch)
             val_sampler.set_epoch(epoch)
             
@@ -352,7 +354,7 @@ def main_worker(rank, world_size, config, args):
                 try:
                     s3_uri = upload_file_to_s3(
                         compressed_path,
-                        bucket_name='resnet-1k-oct-25',
+                        bucket_name='resnet-1k-oct-25-resume',
                         s3_prefix='imagenet1K_epoch_/epoch_'+str(epoch)
                     )
                     logger.info(f"Model checkpoint upload completed:")
@@ -369,7 +371,7 @@ def main_worker(rank, world_size, config, args):
                         log_path = os.path.join("logs", config.name, 'csv_logger', log_name)
                         s3_uri = upload_file_to_s3(
                             log_path,
-                            bucket_name='resnet-1k-oct-25',
+                            bucket_name='resnet-1k-oct-25-resume',
                             s3_prefix=prefix+'/epoch_'+str(epoch)
                         )
                         logger.info(f"{log_name} upload completed: ")
@@ -382,7 +384,7 @@ def main_worker(rank, world_size, config, args):
                     log_filepath = os.path.join("logs", config.name, "app_logs", "training_apps.log")
                     s3_uri = upload_file_to_s3(
                         log_filepath,
-                        bucket_name='resnet-1k-oct-25',
+                        bucket_name='resnet-1k-oct-25-resume',
                         s3_prefix='log_handler/epoch_'+str(epoch)
                     )
                     logger.info(f"Log file upload completed: {s3_uri}")
