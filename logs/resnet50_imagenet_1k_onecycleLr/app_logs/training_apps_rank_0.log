@@ -1,0 +1,432 @@
+2025-10-19 20:07:20 - INFO - Rank 0 initialized logger
+2025-10-19 20:07:24 - INFO - Starting training from epoch 0
+2025-10-19 20:07:24 - INFO - Current Epoch 0
+2025-10-19 20:26:02 - INFO - [Train Stage] Epoch 1 - Loss: 6.4001, Acc: 1.588%, Top-5 Acc: 5.280%, Time: 1118.34s LR: 0.0087611
+2025-10-19 20:26:02 - INFO - [Test Stage] Epoch 2 Stage : Testing STARTS
+2025-10-19 20:27:31 - INFO - [Test Stage] Epoch 2 - Loss: 24.4134, Acc: 3.20%, Top-5 Acc: 9.57%
+2025-10-19 20:27:31 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-0-train_acc-1.59-test_acc-3.20-train_acc5-5.28-test_acc5-9.57.pth
+2025-10-19 20:27:40 - INFO - Starting upload of checkpoint (181.01 MB)
+2025-10-19 20:27:43 - INFO - Model checkpoint upload completed:
+2025-10-19 20:27:43 - INFO - training_log.csv upload completed: 
+2025-10-19 20:27:43 - INFO - test_log.csv upload completed: 
+2025-10-19 20:27:43 - INFO - Log file upload completed: None
+2025-10-19 20:27:43 - INFO - All uploads completed successfully for epoch 0
+2025-10-19 20:27:43 - INFO - Current Epoch 1
+2025-10-19 20:44:36 - INFO - [Train Stage] Epoch 2 - Loss: 5.3979, Acc: 6.632%, Top-5 Acc: 17.871%, Time: 1013.28s LR: 0.0127734
+2025-10-19 20:44:36 - INFO - [Test Stage] Epoch 3 Stage : Testing STARTS
+2025-10-19 20:46:05 - INFO - [Test Stage] Epoch 3 - Loss: 22.0473, Acc: 6.87%, Top-5 Acc: 18.01%
+2025-10-19 20:46:05 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-1-train_acc-6.63-test_acc-6.87-train_acc5-17.87-test_acc5-18.01.pth
+2025-10-19 20:46:13 - INFO - Starting upload of checkpoint (180.99 MB)
+2025-10-19 20:46:15 - INFO - Model checkpoint upload completed:
+2025-10-19 20:46:15 - INFO - training_log.csv upload completed: 
+2025-10-19 20:46:15 - INFO - test_log.csv upload completed: 
+2025-10-19 20:46:15 - INFO - Log file upload completed: None
+2025-10-19 20:46:15 - INFO - All uploads completed successfully for epoch 1
+2025-10-19 20:46:15 - INFO - Current Epoch 2
+2025-10-19 21:03:10 - INFO - [Train Stage] Epoch 3 - Loss: 4.7293, Acc: 12.652%, Top-5 Acc: 29.337%, Time: 1014.67s LR: 0.0193248
+2025-10-19 21:03:10 - INFO - [Test Stage] Epoch 4 Stage : Testing STARTS
+2025-10-19 21:04:38 - INFO - [Test Stage] Epoch 4 - Loss: 18.4659, Acc: 14.18%, Top-5 Acc: 32.03%
+2025-10-19 21:04:38 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-2-train_acc-12.65-test_acc-14.18-train_acc5-29.34-test_acc5-32.03.pth
+2025-10-19 21:04:47 - INFO - Starting upload of checkpoint (180.97 MB)
+2025-10-19 21:04:49 - INFO - Model checkpoint upload completed:
+2025-10-19 21:04:49 - INFO - training_log.csv upload completed: 
+2025-10-19 21:04:49 - INFO - test_log.csv upload completed: 
+2025-10-19 21:04:49 - INFO - Log file upload completed: None
+2025-10-19 21:04:49 - INFO - All uploads completed successfully for epoch 2
+2025-10-19 21:04:49 - INFO - Current Epoch 3
+2025-10-19 21:22:21 - INFO - [Train Stage] Epoch 4 - Loss: 4.1322, Acc: 19.676%, Top-5 Acc: 40.462%, Time: 1051.98s LR: 0.0282164
+2025-10-19 21:22:21 - INFO - [Test Stage] Epoch 5 Stage : Testing STARTS
+2025-10-19 21:23:50 - INFO - [Test Stage] Epoch 5 - Loss: 15.1539, Acc: 22.92%, Top-5 Acc: 46.73%
+2025-10-19 21:23:50 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-3-train_acc-19.68-test_acc-22.92-train_acc5-40.46-test_acc5-46.73.pth
+2025-10-19 21:23:59 - INFO - Starting upload of checkpoint (180.98 MB)
+2025-10-19 21:24:01 - INFO - Model checkpoint upload completed:
+2025-10-19 21:24:01 - INFO - training_log.csv upload completed: 
+2025-10-19 21:24:01 - INFO - test_log.csv upload completed: 
+2025-10-19 21:24:01 - INFO - Log file upload completed: None
+2025-10-19 21:24:01 - INFO - All uploads completed successfully for epoch 3
+2025-10-19 21:24:01 - INFO - Current Epoch 4
+2025-10-19 21:40:54 - INFO - [Train Stage] Epoch 5 - Loss: 3.6507, Acc: 26.279%, Top-5 Acc: 49.434%, Time: 1012.56s LR: 0.0391779
+2025-10-19 21:40:54 - INFO - [Test Stage] Epoch 6 Stage : Testing STARTS
+2025-10-19 21:42:22 - INFO - [Test Stage] Epoch 6 - Loss: 13.4096, Acc: 29.61%, Top-5 Acc: 54.46%
+2025-10-19 21:42:22 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-4-train_acc-26.28-test_acc-29.61-train_acc5-49.43-test_acc5-54.46.pth
+2025-10-19 21:42:32 - INFO - Starting upload of checkpoint (180.98 MB)
+2025-10-19 21:42:34 - INFO - Model checkpoint upload completed:
+2025-10-19 21:42:34 - INFO - training_log.csv upload completed: 
+2025-10-19 21:42:34 - INFO - test_log.csv upload completed: 
+2025-10-19 21:42:34 - INFO - Log file upload completed: None
+2025-10-19 21:42:34 - INFO - All uploads completed successfully for epoch 4
+2025-10-19 21:42:34 - INFO - Current Epoch 5
+2025-10-19 21:59:25 - INFO - [Train Stage] Epoch 6 - Loss: 3.2854, Acc: 31.795%, Top-5 Acc: 56.120%, Time: 1010.58s LR: 0.0518763
+2025-10-19 21:59:25 - INFO - [Test Stage] Epoch 7 Stage : Testing STARTS
+2025-10-19 22:00:53 - INFO - [Test Stage] Epoch 7 - Loss: 11.8123, Acc: 35.87%, Top-5 Acc: 61.74%
+2025-10-19 22:00:53 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-5-train_acc-31.80-test_acc-35.87-train_acc5-56.12-test_acc5-61.74.pth
+2025-10-19 22:01:02 - INFO - Starting upload of checkpoint (180.99 MB)
+2025-10-19 22:01:04 - INFO - Model checkpoint upload completed:
+2025-10-19 22:01:04 - INFO - training_log.csv upload completed: 
+2025-10-19 22:01:04 - INFO - test_log.csv upload completed: 
+2025-10-19 22:01:04 - INFO - Log file upload completed: None
+2025-10-19 22:01:04 - INFO - All uploads completed successfully for epoch 5
+2025-10-19 22:01:04 - INFO - Current Epoch 6
+2025-10-19 22:17:58 - INFO - [Train Stage] Epoch 7 - Loss: 3.0049, Acc: 36.344%, Top-5 Acc: 61.089%, Time: 1014.18s LR: 0.0659255
+2025-10-19 22:17:58 - INFO - [Test Stage] Epoch 8 Stage : Testing STARTS
+2025-10-19 22:19:26 - INFO - [Test Stage] Epoch 8 - Loss: 11.5821, Acc: 36.78%, Top-5 Acc: 63.25%
+2025-10-19 22:19:26 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-6-train_acc-36.34-test_acc-36.78-train_acc5-61.09-test_acc5-63.25.pth
+2025-10-19 22:19:35 - INFO - Starting upload of checkpoint (180.99 MB)
+2025-10-19 22:19:37 - INFO - Model checkpoint upload completed:
+2025-10-19 22:19:37 - INFO - training_log.csv upload completed: 
+2025-10-19 22:19:37 - INFO - test_log.csv upload completed: 
+2025-10-19 22:19:37 - INFO - Log file upload completed: None
+2025-10-19 22:19:37 - INFO - All uploads completed successfully for epoch 6
+2025-10-19 22:19:37 - INFO - Current Epoch 7
+2025-10-19 22:36:31 - INFO - [Train Stage] Epoch 8 - Loss: 2.7833, Acc: 40.080%, Top-5 Acc: 64.999%, Time: 1013.65s LR: 0.0808987
+2025-10-19 22:36:31 - INFO - [Test Stage] Epoch 9 Stage : Testing STARTS
+2025-10-19 22:37:59 - INFO - [Test Stage] Epoch 9 - Loss: 10.5592, Acc: 41.62%, Top-5 Acc: 67.55%
+2025-10-19 22:37:59 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-7-train_acc-40.08-test_acc-41.62-train_acc5-65.00-test_acc5-67.55.pth
+2025-10-19 22:38:08 - INFO - Starting upload of checkpoint (181.01 MB)
+2025-10-19 22:38:10 - INFO - Model checkpoint upload completed:
+2025-10-19 22:38:10 - INFO - training_log.csv upload completed: 
+2025-10-19 22:38:10 - INFO - test_log.csv upload completed: 
+2025-10-19 22:38:10 - INFO - Log file upload completed: None
+2025-10-19 22:38:10 - INFO - All uploads completed successfully for epoch 7
+2025-10-19 22:38:10 - INFO - Current Epoch 8
+2025-10-19 22:55:06 - INFO - [Train Stage] Epoch 9 - Loss: 2.6126, Acc: 43.042%, Top-5 Acc: 67.870%, Time: 1016.11s LR: 0.0963409
+2025-10-19 22:55:06 - INFO - [Test Stage] Epoch 10 Stage : Testing STARTS
+2025-10-19 22:56:36 - INFO - [Test Stage] Epoch 10 - Loss: 10.2775, Acc: 42.22%, Top-5 Acc: 68.89%
+2025-10-19 22:56:36 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-8-train_acc-43.04-test_acc-42.22-train_acc5-67.87-test_acc5-68.89.pth
+2025-10-19 22:56:45 - INFO - Starting upload of checkpoint (181.01 MB)
+2025-10-19 22:56:47 - INFO - Model checkpoint upload completed:
+2025-10-19 22:56:47 - INFO - training_log.csv upload completed: 
+2025-10-19 22:56:47 - INFO - test_log.csv upload completed: 
+2025-10-19 22:56:47 - INFO - Log file upload completed: None
+2025-10-19 22:56:47 - INFO - All uploads completed successfully for epoch 8
+2025-10-19 22:56:47 - INFO - Current Epoch 9
+2025-10-19 23:13:49 - INFO - [Train Stage] Epoch 10 - Loss: 2.4789, Acc: 45.469%, Top-5 Acc: 70.115%, Time: 1021.42s LR: 0.1117827
+2025-10-19 23:13:49 - INFO - [Test Stage] Epoch 11 Stage : Testing STARTS
+2025-10-19 23:15:17 - INFO - [Test Stage] Epoch 11 - Loss: 9.7463, Acc: 44.78%, Top-5 Acc: 71.05%
+2025-10-19 23:15:17 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-9-train_acc-45.47-test_acc-44.78-train_acc5-70.12-test_acc5-71.05.pth
+2025-10-19 23:15:27 - INFO - Starting upload of checkpoint (181.02 MB)
+2025-10-19 23:15:29 - INFO - Model checkpoint upload completed:
+2025-10-19 23:15:29 - INFO - training_log.csv upload completed: 
+2025-10-19 23:15:29 - INFO - test_log.csv upload completed: 
+2025-10-19 23:15:29 - INFO - Log file upload completed: None
+2025-10-19 23:15:29 - INFO - All uploads completed successfully for epoch 9
+2025-10-19 23:15:29 - INFO - Current Epoch 10
+2025-10-19 23:32:28 - INFO - [Train Stage] Epoch 11 - Loss: 2.3629, Acc: 47.625%, Top-5 Acc: 71.971%, Time: 1018.27s LR: 0.1267549
+2025-10-19 23:32:28 - INFO - [Test Stage] Epoch 12 Stage : Testing STARTS
+2025-10-19 23:33:56 - INFO - [Test Stage] Epoch 12 - Loss: 8.9257, Acc: 48.97%, Top-5 Acc: 74.41%
+2025-10-19 23:33:56 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-10-train_acc-47.62-test_acc-48.97-train_acc5-71.97-test_acc5-74.41.pth
+2025-10-19 23:34:05 - INFO - Starting upload of checkpoint (181.02 MB)
+2025-10-19 23:34:07 - INFO - Model checkpoint upload completed:
+2025-10-19 23:34:08 - INFO - training_log.csv upload completed: 
+2025-10-19 23:34:08 - INFO - test_log.csv upload completed: 
+2025-10-19 23:34:08 - INFO - Log file upload completed: None
+2025-10-19 23:34:08 - INFO - All uploads completed successfully for epoch 10
+2025-10-19 23:34:08 - INFO - Current Epoch 11
+2025-10-19 23:51:02 - INFO - [Train Stage] Epoch 12 - Loss: 2.2742, Acc: 49.196%, Top-5 Acc: 73.431%, Time: 1014.00s LR: 0.1408025
+2025-10-19 23:51:02 - INFO - [Test Stage] Epoch 13 Stage : Testing STARTS
+2025-10-19 23:52:39 - INFO - [Test Stage] Epoch 13 - Loss: 9.0899, Acc: 47.84%, Top-5 Acc: 73.94%
+2025-10-19 23:52:39 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-11-train_acc-49.20-test_acc-47.84-train_acc5-73.43-test_acc5-73.94.pth
+2025-10-19 23:52:48 - INFO - Starting upload of checkpoint (181.02 MB)
+2025-10-19 23:52:50 - INFO - Model checkpoint upload completed:
+2025-10-19 23:52:50 - INFO - training_log.csv upload completed: 
+2025-10-19 23:52:50 - INFO - test_log.csv upload completed: 
+2025-10-19 23:52:50 - INFO - Log file upload completed: None
+2025-10-19 23:52:50 - INFO - All uploads completed successfully for epoch 11
+2025-10-19 23:52:50 - INFO - Current Epoch 12
+2025-10-20 00:09:42 - INFO - [Train Stage] Epoch 13 - Loss: 2.1971, Acc: 50.672%, Top-5 Acc: 74.671%, Time: 1011.67s LR: 0.1534987
+2025-10-20 00:09:42 - INFO - [Test Stage] Epoch 14 Stage : Testing STARTS
+2025-10-20 00:11:10 - INFO - [Test Stage] Epoch 14 - Loss: 8.4559, Acc: 51.15%, Top-5 Acc: 76.27%
+2025-10-20 00:11:10 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-12-train_acc-50.67-test_acc-51.15-train_acc5-74.67-test_acc5-76.27.pth
+2025-10-20 00:11:19 - INFO - Starting upload of checkpoint (181.03 MB)
+2025-10-20 00:11:20 - INFO - Model checkpoint upload completed:
+2025-10-20 00:11:20 - INFO - training_log.csv upload completed: 
+2025-10-20 00:11:20 - INFO - test_log.csv upload completed: 
+2025-10-20 00:11:20 - INFO - Log file upload completed: None
+2025-10-20 00:11:20 - INFO - All uploads completed successfully for epoch 12
+2025-10-20 00:11:20 - INFO - Current Epoch 13
+2025-10-20 00:28:16 - INFO - [Train Stage] Epoch 14 - Loss: 2.1287, Acc: 51.957%, Top-5 Acc: 75.718%, Time: 1015.90s LR: 0.1644575
+2025-10-20 00:28:16 - INFO - [Test Stage] Epoch 15 Stage : Testing STARTS
+2025-10-20 00:29:46 - INFO - [Test Stage] Epoch 15 - Loss: 8.2725, Acc: 52.05%, Top-5 Acc: 77.17%
+2025-10-20 00:29:46 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-13-train_acc-51.96-test_acc-52.05-train_acc5-75.72-test_acc5-77.17.pth
+2025-10-20 00:29:54 - INFO - Starting upload of checkpoint (181.03 MB)
+2025-10-20 00:29:56 - INFO - Model checkpoint upload completed:
+2025-10-20 00:29:56 - INFO - training_log.csv upload completed: 
+2025-10-20 00:29:57 - INFO - test_log.csv upload completed: 
+2025-10-20 00:29:57 - INFO - Log file upload completed: None
+2025-10-20 00:29:57 - INFO - All uploads completed successfully for epoch 13
+2025-10-20 00:29:57 - INFO - Current Epoch 14
+2025-10-20 00:46:55 - INFO - [Train Stage] Epoch 15 - Loss: 2.0766, Acc: 52.935%, Top-5 Acc: 76.519%, Time: 1018.26s LR: 0.1733460
+2025-10-20 00:46:55 - INFO - [Test Stage] Epoch 16 Stage : Testing STARTS
+2025-10-20 00:48:23 - INFO - [Test Stage] Epoch 16 - Loss: 8.9548, Acc: 49.19%, Top-5 Acc: 74.56%
+2025-10-20 00:48:23 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-14-train_acc-52.94-test_acc-49.19-train_acc5-76.52-test_acc5-74.56.pth
+2025-10-20 00:48:33 - INFO - Starting upload of checkpoint (181.04 MB)
+2025-10-20 00:48:34 - INFO - Model checkpoint upload completed:
+2025-10-20 00:48:35 - INFO - training_log.csv upload completed: 
+2025-10-20 00:48:35 - INFO - test_log.csv upload completed: 
+2025-10-20 00:48:35 - INFO - Log file upload completed: None
+2025-10-20 00:48:35 - INFO - All uploads completed successfully for epoch 14
+2025-10-20 00:48:35 - INFO - Current Epoch 15
+2025-10-20 01:05:30 - INFO - [Train Stage] Epoch 16 - Loss: 2.0253, Acc: 53.941%, Top-5 Acc: 77.322%, Time: 1015.10s LR: 0.1798941
+2025-10-20 01:05:30 - INFO - [Test Stage] Epoch 17 Stage : Testing STARTS
+2025-10-20 01:06:58 - INFO - [Test Stage] Epoch 17 - Loss: 7.6196, Acc: 54.80%, Top-5 Acc: 79.76%
+2025-10-20 01:06:58 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-15-train_acc-53.94-test_acc-54.80-train_acc5-77.32-test_acc5-79.76.pth
+2025-10-20 01:07:07 - INFO - Starting upload of checkpoint (181.04 MB)
+2025-10-20 01:07:09 - INFO - Model checkpoint upload completed:
+2025-10-20 01:07:09 - INFO - training_log.csv upload completed: 
+2025-10-20 01:07:09 - INFO - test_log.csv upload completed: 
+2025-10-20 01:07:09 - INFO - Log file upload completed: None
+2025-10-20 01:07:09 - INFO - All uploads completed successfully for epoch 15
+2025-10-20 01:07:09 - INFO - Current Epoch 16
+2025-10-20 01:24:06 - INFO - [Train Stage] Epoch 17 - Loss: 1.9849, Acc: 54.719%, Top-5 Acc: 77.967%, Time: 1016.95s LR: 0.1839027
+2025-10-20 01:24:06 - INFO - [Test Stage] Epoch 18 Stage : Testing STARTS
+2025-10-20 01:25:34 - INFO - [Test Stage] Epoch 18 - Loss: 7.9492, Acc: 53.36%, Top-5 Acc: 78.48%
+2025-10-20 01:25:34 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-16-train_acc-54.72-test_acc-53.36-train_acc5-77.97-test_acc5-78.48.pth
+2025-10-20 01:25:43 - INFO - Starting upload of checkpoint (181.04 MB)
+2025-10-20 01:25:45 - INFO - Model checkpoint upload completed:
+2025-10-20 01:25:45 - INFO - training_log.csv upload completed: 
+2025-10-20 01:25:45 - INFO - test_log.csv upload completed: 
+2025-10-20 01:25:45 - INFO - Log file upload completed: None
+2025-10-20 01:25:45 - INFO - All uploads completed successfully for epoch 16
+2025-10-20 01:25:45 - INFO - Current Epoch 17
+2025-10-20 01:42:44 - INFO - [Train Stage] Epoch 18 - Loss: 1.9471, Acc: 55.464%, Top-5 Acc: 78.514%, Time: 1019.51s LR: 0.1852500
+2025-10-20 01:42:44 - INFO - [Test Stage] Epoch 19 Stage : Testing STARTS
+2025-10-20 01:44:12 - INFO - [Test Stage] Epoch 19 - Loss: 7.7472, Acc: 54.30%, Top-5 Acc: 79.10%
+2025-10-20 01:44:12 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-17-train_acc-55.46-test_acc-54.30-train_acc5-78.51-test_acc5-79.10.pth
+2025-10-20 01:44:22 - INFO - Starting upload of checkpoint (181.04 MB)
+2025-10-20 01:44:24 - INFO - Model checkpoint upload completed:
+2025-10-20 01:44:24 - INFO - training_log.csv upload completed: 
+2025-10-20 01:44:24 - INFO - test_log.csv upload completed: 
+2025-10-20 01:44:24 - INFO - Log file upload completed: None
+2025-10-20 01:44:24 - INFO - All uploads completed successfully for epoch 17
+2025-10-20 01:44:24 - INFO - Current Epoch 18
+2025-10-20 02:01:27 - INFO - [Train Stage] Epoch 19 - Loss: 1.9145, Acc: 56.130%, Top-5 Acc: 79.014%, Time: 1022.56s LR: 0.1849903
+2025-10-20 02:01:27 - INFO - [Test Stage] Epoch 20 Stage : Testing STARTS
+2025-10-20 02:03:18 - INFO - [Test Stage] Epoch 20 - Loss: 7.7663, Acc: 54.37%, Top-5 Acc: 79.15%
+2025-10-20 02:03:18 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-18-train_acc-56.13-test_acc-54.37-train_acc5-79.01-test_acc5-79.15.pth
+2025-10-20 02:03:27 - INFO - Starting upload of checkpoint (181.05 MB)
+2025-10-20 02:03:29 - INFO - Model checkpoint upload completed:
+2025-10-20 02:03:30 - INFO - training_log.csv upload completed: 
+2025-10-20 02:03:30 - INFO - test_log.csv upload completed: 
+2025-10-20 02:03:30 - INFO - Log file upload completed: None
+2025-10-20 02:03:30 - INFO - All uploads completed successfully for epoch 18
+2025-10-20 02:03:30 - INFO - Current Epoch 19
+2025-10-20 02:20:24 - INFO - [Train Stage] Epoch 20 - Loss: 1.8813, Acc: 56.741%, Top-5 Acc: 79.518%, Time: 1014.01s LR: 0.1842140
+2025-10-20 02:20:24 - INFO - [Test Stage] Epoch 21 Stage : Testing STARTS
+2025-10-20 02:21:52 - INFO - [Test Stage] Epoch 21 - Loss: 7.3584, Acc: 56.32%, Top-5 Acc: 80.71%
+2025-10-20 02:21:52 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-19-train_acc-56.74-test_acc-56.32-train_acc5-79.52-test_acc5-80.71.pth
+2025-10-20 02:22:02 - INFO - Starting upload of checkpoint (181.05 MB)
+2025-10-20 02:22:04 - INFO - Model checkpoint upload completed:
+2025-10-20 02:22:04 - INFO - training_log.csv upload completed: 
+2025-10-20 02:22:04 - INFO - test_log.csv upload completed: 
+2025-10-20 02:22:04 - INFO - Log file upload completed: None
+2025-10-20 02:22:04 - INFO - All uploads completed successfully for epoch 19
+2025-10-20 02:22:04 - INFO - Current Epoch 20
+2025-10-20 02:38:56 - INFO - [Train Stage] Epoch 21 - Loss: 1.8525, Acc: 57.300%, Top-5 Acc: 79.937%, Time: 1011.72s LR: 0.1829256
+2025-10-20 02:38:56 - INFO - [Test Stage] Epoch 22 Stage : Testing STARTS
+2025-10-20 02:40:24 - INFO - [Test Stage] Epoch 22 - Loss: 7.0361, Acc: 57.87%, Top-5 Acc: 81.77%
+2025-10-20 02:40:24 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-20-train_acc-57.30-test_acc-57.87-train_acc5-79.94-test_acc5-81.77.pth
+2025-10-20 02:40:33 - INFO - Starting upload of checkpoint (181.05 MB)
+2025-10-20 02:40:35 - INFO - Model checkpoint upload completed:
+2025-10-20 02:40:35 - INFO - training_log.csv upload completed: 
+2025-10-20 02:40:36 - INFO - test_log.csv upload completed: 
+2025-10-20 02:40:36 - INFO - Log file upload completed: None
+2025-10-20 02:40:36 - INFO - All uploads completed successfully for epoch 20
+2025-10-20 02:40:36 - INFO - Current Epoch 21
+2025-10-20 02:57:30 - INFO - [Train Stage] Epoch 22 - Loss: 1.8288, Acc: 57.827%, Top-5 Acc: 80.298%, Time: 1014.75s LR: 0.1811321
+2025-10-20 02:57:30 - INFO - [Test Stage] Epoch 23 Stage : Testing STARTS
+2025-10-20 02:58:58 - INFO - [Test Stage] Epoch 23 - Loss: 7.0991, Acc: 57.65%, Top-5 Acc: 81.76%
+2025-10-20 02:58:58 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-21-train_acc-57.83-test_acc-57.65-train_acc5-80.30-test_acc5-81.76.pth
+2025-10-20 02:59:08 - INFO - Starting upload of checkpoint (181.05 MB)
+2025-10-20 02:59:10 - INFO - Model checkpoint upload completed:
+2025-10-20 02:59:10 - INFO - training_log.csv upload completed: 
+2025-10-20 02:59:10 - INFO - test_log.csv upload completed: 
+2025-10-20 02:59:10 - INFO - Log file upload completed: None
+2025-10-20 02:59:10 - INFO - All uploads completed successfully for epoch 21
+2025-10-20 02:59:10 - INFO - Current Epoch 22
+2025-10-20 03:16:06 - INFO - [Train Stage] Epoch 23 - Loss: 1.8047, Acc: 58.283%, Top-5 Acc: 80.690%, Time: 1015.84s LR: 0.1788437
+2025-10-20 03:16:06 - INFO - [Test Stage] Epoch 24 Stage : Testing STARTS
+2025-10-20 03:17:34 - INFO - [Test Stage] Epoch 24 - Loss: 6.8247, Acc: 59.23%, Top-5 Acc: 82.91%
+2025-10-20 03:17:34 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-22-train_acc-58.28-test_acc-59.23-train_acc5-80.69-test_acc5-82.91.pth
+2025-10-20 03:17:43 - INFO - Starting upload of checkpoint (181.05 MB)
+2025-10-20 03:17:45 - INFO - Model checkpoint upload completed:
+2025-10-20 03:17:45 - INFO - training_log.csv upload completed: 
+2025-10-20 03:17:45 - INFO - test_log.csv upload completed: 
+2025-10-20 03:17:45 - INFO - Log file upload completed: None
+2025-10-20 03:17:45 - INFO - All uploads completed successfully for epoch 22
+2025-10-20 03:17:45 - INFO - Current Epoch 23
+2025-10-20 03:34:44 - INFO - [Train Stage] Epoch 24 - Loss: 1.7865, Acc: 58.664%, Top-5 Acc: 80.924%, Time: 1018.73s LR: 0.1760731
+2025-10-20 03:34:44 - INFO - [Test Stage] Epoch 25 Stage : Testing STARTS
+2025-10-20 03:36:14 - INFO - [Test Stage] Epoch 25 - Loss: 7.3341, Acc: 56.19%, Top-5 Acc: 80.59%
+2025-10-20 03:36:14 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-23-train_acc-58.66-test_acc-56.19-train_acc5-80.92-test_acc5-80.59.pth
+2025-10-20 03:36:24 - INFO - Starting upload of checkpoint (181.06 MB)
+2025-10-20 03:36:25 - INFO - Model checkpoint upload completed:
+2025-10-20 03:36:26 - INFO - training_log.csv upload completed: 
+2025-10-20 03:36:26 - INFO - test_log.csv upload completed: 
+2025-10-20 03:36:26 - INFO - Log file upload completed: None
+2025-10-20 03:36:26 - INFO - All uploads completed successfully for epoch 23
+2025-10-20 03:36:26 - INFO - Current Epoch 24
+2025-10-20 03:53:23 - INFO - [Train Stage] Epoch 25 - Loss: 1.7653, Acc: 59.091%, Top-5 Acc: 81.266%, Time: 1017.11s LR: 0.1728358
+2025-10-20 03:53:23 - INFO - [Test Stage] Epoch 26 Stage : Testing STARTS
+2025-10-20 03:54:53 - INFO - [Test Stage] Epoch 26 - Loss: 6.8244, Acc: 59.06%, Top-5 Acc: 82.73%
+2025-10-20 03:54:53 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-24-train_acc-59.09-test_acc-59.06-train_acc5-81.27-test_acc5-82.73.pth
+2025-10-20 03:55:02 - INFO - Starting upload of checkpoint (181.06 MB)
+2025-10-20 03:55:04 - INFO - Model checkpoint upload completed:
+2025-10-20 03:55:04 - INFO - training_log.csv upload completed: 
+2025-10-20 03:55:04 - INFO - test_log.csv upload completed: 
+2025-10-20 03:55:04 - INFO - Log file upload completed: None
+2025-10-20 03:55:04 - INFO - All uploads completed successfully for epoch 24
+2025-10-20 03:55:04 - INFO - Current Epoch 25
+2025-10-20 04:12:00 - INFO - [Train Stage] Epoch 26 - Loss: 1.7435, Acc: 59.501%, Top-5 Acc: 81.533%, Time: 1015.97s LR: 0.1691500
+2025-10-20 04:12:00 - INFO - [Test Stage] Epoch 27 Stage : Testing STARTS
+2025-10-20 04:13:31 - INFO - [Test Stage] Epoch 27 - Loss: 6.8463, Acc: 59.04%, Top-5 Acc: 82.70%
+2025-10-20 04:13:31 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-25-train_acc-59.50-test_acc-59.04-train_acc5-81.53-test_acc5-82.70.pth
+2025-10-20 04:13:40 - INFO - Starting upload of checkpoint (181.06 MB)
+2025-10-20 04:13:41 - INFO - Model checkpoint upload completed:
+2025-10-20 04:13:42 - INFO - training_log.csv upload completed: 
+2025-10-20 04:13:42 - INFO - test_log.csv upload completed: 
+2025-10-20 04:13:42 - INFO - Log file upload completed: None
+2025-10-20 04:13:42 - INFO - All uploads completed successfully for epoch 25
+2025-10-20 04:13:42 - INFO - Current Epoch 26
+2025-10-20 04:30:35 - INFO - [Train Stage] Epoch 27 - Loss: 1.7291, Acc: 59.818%, Top-5 Acc: 81.739%, Time: 1012.94s LR: 0.1650362
+2025-10-20 04:30:35 - INFO - [Test Stage] Epoch 28 Stage : Testing STARTS
+2025-10-20 04:32:03 - INFO - [Test Stage] Epoch 28 - Loss: 7.0021, Acc: 58.14%, Top-5 Acc: 81.98%
+2025-10-20 04:32:03 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-26-train_acc-59.82-test_acc-58.14-train_acc5-81.74-test_acc5-81.98.pth
+2025-10-20 04:32:12 - INFO - Starting upload of checkpoint (181.06 MB)
+2025-10-20 04:32:14 - INFO - Model checkpoint upload completed:
+2025-10-20 04:32:14 - INFO - training_log.csv upload completed: 
+2025-10-20 04:32:15 - INFO - test_log.csv upload completed: 
+2025-10-20 04:32:15 - INFO - Log file upload completed: None
+2025-10-20 04:32:15 - INFO - All uploads completed successfully for epoch 26
+2025-10-20 04:32:15 - INFO - Current Epoch 27
+2025-10-20 04:49:13 - INFO - [Train Stage] Epoch 28 - Loss: 1.7101, Acc: 60.199%, Top-5 Acc: 82.025%, Time: 1018.43s LR: 0.1605174
+2025-10-20 04:49:13 - INFO - [Test Stage] Epoch 29 Stage : Testing STARTS
+2025-10-20 04:50:41 - INFO - [Test Stage] Epoch 29 - Loss: 7.0131, Acc: 58.46%, Top-5 Acc: 81.98%
+2025-10-20 04:50:41 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-27-train_acc-60.20-test_acc-58.46-train_acc5-82.02-test_acc5-81.98.pth
+2025-10-20 04:50:50 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 04:50:52 - INFO - Model checkpoint upload completed:
+2025-10-20 04:50:52 - INFO - training_log.csv upload completed: 
+2025-10-20 04:50:52 - INFO - test_log.csv upload completed: 
+2025-10-20 04:50:52 - INFO - Log file upload completed: None
+2025-10-20 04:50:52 - INFO - All uploads completed successfully for epoch 27
+2025-10-20 04:50:52 - INFO - Current Epoch 28
+2025-10-20 05:07:47 - INFO - [Train Stage] Epoch 29 - Loss: 1.6935, Acc: 60.495%, Top-5 Acc: 82.302%, Time: 1015.15s LR: 0.1556190
+2025-10-20 05:07:47 - INFO - [Test Stage] Epoch 30 Stage : Testing STARTS
+2025-10-20 05:09:20 - INFO - [Test Stage] Epoch 30 - Loss: 6.5827, Acc: 60.36%, Top-5 Acc: 83.71%
+2025-10-20 05:09:20 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-28-train_acc-60.50-test_acc-60.36-train_acc5-82.30-test_acc5-83.71.pth
+2025-10-20 05:09:28 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 05:09:30 - INFO - Model checkpoint upload completed:
+2025-10-20 05:09:30 - INFO - training_log.csv upload completed: 
+2025-10-20 05:09:30 - INFO - test_log.csv upload completed: 
+2025-10-20 05:09:30 - INFO - Log file upload completed: None
+2025-10-20 05:09:30 - INFO - All uploads completed successfully for epoch 28
+2025-10-20 05:09:30 - INFO - Current Epoch 29
+2025-10-20 05:26:20 - INFO - [Train Stage] Epoch 30 - Loss: 1.6773, Acc: 60.856%, Top-5 Acc: 82.498%, Time: 1009.95s LR: 0.1503683
+2025-10-20 05:26:20 - INFO - [Test Stage] Epoch 31 Stage : Testing STARTS
+2025-10-20 05:27:49 - INFO - [Test Stage] Epoch 31 - Loss: 6.7405, Acc: 59.49%, Top-5 Acc: 83.05%
+2025-10-20 05:27:49 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-29-train_acc-60.86-test_acc-59.49-train_acc5-82.50-test_acc5-83.05.pth
+2025-10-20 05:27:59 - INFO - Starting upload of checkpoint (181.08 MB)
+2025-10-20 05:28:01 - INFO - Model checkpoint upload completed:
+2025-10-20 05:28:01 - INFO - training_log.csv upload completed: 
+2025-10-20 05:28:01 - INFO - test_log.csv upload completed: 
+2025-10-20 05:28:01 - INFO - Log file upload completed: None
+2025-10-20 05:28:01 - INFO - All uploads completed successfully for epoch 29
+2025-10-20 05:28:01 - INFO - Current Epoch 30
+2025-10-20 05:44:59 - INFO - [Train Stage] Epoch 31 - Loss: 1.6568, Acc: 61.296%, Top-5 Acc: 82.773%, Time: 1018.00s LR: 0.1447947
+2025-10-20 05:44:59 - INFO - [Test Stage] Epoch 32 Stage : Testing STARTS
+2025-10-20 05:46:27 - INFO - [Test Stage] Epoch 32 - Loss: 6.6548, Acc: 60.01%, Top-5 Acc: 83.32%
+2025-10-20 05:46:27 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-30-train_acc-61.30-test_acc-60.01-train_acc5-82.77-test_acc5-83.32.pth
+2025-10-20 05:46:37 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 05:46:39 - INFO - Model checkpoint upload completed:
+2025-10-20 05:46:39 - INFO - training_log.csv upload completed: 
+2025-10-20 05:46:39 - INFO - test_log.csv upload completed: 
+2025-10-20 05:46:39 - INFO - Log file upload completed: None
+2025-10-20 05:46:39 - INFO - All uploads completed successfully for epoch 30
+2025-10-20 05:46:39 - INFO - Current Epoch 31
+2025-10-20 06:03:34 - INFO - [Train Stage] Epoch 32 - Loss: 1.6419, Acc: 61.598%, Top-5 Acc: 83.006%, Time: 1015.04s LR: 0.1389293
+2025-10-20 06:03:34 - INFO - [Test Stage] Epoch 33 Stage : Testing STARTS
+2025-10-20 06:05:02 - INFO - [Test Stage] Epoch 33 - Loss: 6.4689, Acc: 61.05%, Top-5 Acc: 84.12%
+2025-10-20 06:05:02 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-31-train_acc-61.60-test_acc-61.05-train_acc5-83.01-test_acc5-84.12.pth
+2025-10-20 06:05:11 - INFO - Starting upload of checkpoint (181.06 MB)
+2025-10-20 06:05:13 - INFO - Model checkpoint upload completed:
+2025-10-20 06:05:13 - INFO - training_log.csv upload completed: 
+2025-10-20 06:05:13 - INFO - test_log.csv upload completed: 
+2025-10-20 06:05:13 - INFO - Log file upload completed: None
+2025-10-20 06:05:13 - INFO - All uploads completed successfully for epoch 31
+2025-10-20 06:05:13 - INFO - Current Epoch 32
+2025-10-20 06:22:10 - INFO - [Train Stage] Epoch 33 - Loss: 1.6260, Acc: 61.923%, Top-5 Acc: 83.231%, Time: 1016.82s LR: 0.1328050
+2025-10-20 06:22:10 - INFO - [Test Stage] Epoch 34 Stage : Testing STARTS
+2025-10-20 06:23:39 - INFO - [Test Stage] Epoch 34 - Loss: 6.2414, Acc: 61.89%, Top-5 Acc: 84.88%
+2025-10-20 06:23:39 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-32-train_acc-61.92-test_acc-61.89-train_acc5-83.23-test_acc5-84.88.pth
+2025-10-20 06:23:49 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 06:23:51 - INFO - Model checkpoint upload completed:
+2025-10-20 06:23:51 - INFO - training_log.csv upload completed: 
+2025-10-20 06:23:51 - INFO - test_log.csv upload completed: 
+2025-10-20 06:23:51 - INFO - Log file upload completed: None
+2025-10-20 06:23:51 - INFO - All uploads completed successfully for epoch 32
+2025-10-20 06:23:51 - INFO - Current Epoch 33
+2025-10-20 06:40:43 - INFO - [Train Stage] Epoch 34 - Loss: 1.6081, Acc: 62.283%, Top-5 Acc: 83.466%, Time: 1012.24s LR: 0.1264559
+2025-10-20 06:40:43 - INFO - [Test Stage] Epoch 35 Stage : Testing STARTS
+2025-10-20 06:42:12 - INFO - [Test Stage] Epoch 35 - Loss: 6.0761, Acc: 63.01%, Top-5 Acc: 85.57%
+2025-10-20 06:42:12 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-33-train_acc-62.28-test_acc-63.01-train_acc5-83.47-test_acc5-85.57.pth
+2025-10-20 06:42:20 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 06:42:22 - INFO - Model checkpoint upload completed:
+2025-10-20 06:42:22 - INFO - training_log.csv upload completed: 
+2025-10-20 06:42:22 - INFO - test_log.csv upload completed: 
+2025-10-20 06:42:22 - INFO - Log file upload completed: None
+2025-10-20 06:42:22 - INFO - All uploads completed successfully for epoch 33
+2025-10-20 06:42:22 - INFO - Current Epoch 34
+2025-10-20 06:59:16 - INFO - [Train Stage] Epoch 35 - Loss: 1.5948, Acc: 62.545%, Top-5 Acc: 83.633%, Time: 1013.43s LR: 0.1199177
+2025-10-20 06:59:16 - INFO - [Test Stage] Epoch 36 Stage : Testing STARTS
+2025-10-20 07:00:47 - INFO - [Test Stage] Epoch 36 - Loss: 6.1366, Acc: 62.85%, Top-5 Acc: 85.14%
+2025-10-20 07:00:47 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-34-train_acc-62.54-test_acc-62.85-train_acc5-83.63-test_acc5-85.14.pth
+2025-10-20 07:00:56 - INFO - Starting upload of checkpoint (181.08 MB)
+2025-10-20 07:00:59 - INFO - Model checkpoint upload completed:
+2025-10-20 07:00:59 - INFO - training_log.csv upload completed: 
+2025-10-20 07:00:59 - INFO - test_log.csv upload completed: 
+2025-10-20 07:00:59 - INFO - Log file upload completed: None
+2025-10-20 07:00:59 - INFO - All uploads completed successfully for epoch 34
+2025-10-20 07:00:59 - INFO - Current Epoch 35
+2025-10-20 07:17:47 - INFO - [Train Stage] Epoch 36 - Loss: 1.5756, Acc: 62.924%, Top-5 Acc: 83.923%, Time: 1007.81s LR: 0.1132268
+2025-10-20 07:17:47 - INFO - [Test Stage] Epoch 37 Stage : Testing STARTS
+2025-10-20 07:19:17 - INFO - [Test Stage] Epoch 37 - Loss: 6.4153, Acc: 61.25%, Top-5 Acc: 84.07%
+2025-10-20 07:19:17 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-35-train_acc-62.92-test_acc-61.25-train_acc5-83.92-test_acc5-84.07.pth
+2025-10-20 07:19:26 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 07:19:28 - INFO - Model checkpoint upload completed:
+2025-10-20 07:19:28 - INFO - training_log.csv upload completed: 
+2025-10-20 07:19:28 - INFO - test_log.csv upload completed: 
+2025-10-20 07:19:28 - INFO - Log file upload completed: None
+2025-10-20 07:19:28 - INFO - All uploads completed successfully for epoch 35
+2025-10-20 07:19:28 - INFO - Current Epoch 36
+2025-10-20 07:36:20 - INFO - [Train Stage] Epoch 37 - Loss: 1.5588, Acc: 63.269%, Top-5 Acc: 84.144%, Time: 1012.19s LR: 0.1064208
+2025-10-20 07:36:20 - INFO - [Test Stage] Epoch 38 Stage : Testing STARTS
+2025-10-20 07:37:48 - INFO - [Test Stage] Epoch 38 - Loss: 6.7556, Acc: 59.86%, Top-5 Acc: 83.20%
+2025-10-20 07:37:48 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-36-train_acc-63.27-test_acc-59.86-train_acc5-84.14-test_acc5-83.20.pth
+2025-10-20 07:37:58 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 07:38:00 - INFO - Model checkpoint upload completed:
+2025-10-20 07:38:00 - INFO - training_log.csv upload completed: 
+2025-10-20 07:38:00 - INFO - test_log.csv upload completed: 
+2025-10-20 07:38:00 - INFO - Log file upload completed: None
+2025-10-20 07:38:00 - INFO - All uploads completed successfully for epoch 36
+2025-10-20 07:38:00 - INFO - Current Epoch 37
+2025-10-20 07:54:55 - INFO - [Train Stage] Epoch 38 - Loss: 1.5428, Acc: 63.647%, Top-5 Acc: 84.359%, Time: 1015.21s LR: 0.0995376
+2025-10-20 07:54:55 - INFO - [Test Stage] Epoch 39 Stage : Testing STARTS
+2025-10-20 07:56:24 - INFO - [Test Stage] Epoch 39 - Loss: 6.2833, Acc: 61.83%, Top-5 Acc: 84.83%
+2025-10-20 07:56:24 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-37-train_acc-63.65-test_acc-61.83-train_acc5-84.36-test_acc5-84.83.pth
+2025-10-20 07:56:33 - INFO - Starting upload of checkpoint (181.07 MB)
+2025-10-20 07:56:34 - INFO - Model checkpoint upload completed:
+2025-10-20 07:56:34 - INFO - training_log.csv upload completed: 
+2025-10-20 07:56:34 - INFO - test_log.csv upload completed: 
+2025-10-20 07:56:34 - INFO - Log file upload completed: None
+2025-10-20 07:56:34 - INFO - All uploads completed successfully for epoch 37
+2025-10-20 07:56:34 - INFO - Current Epoch 38
+2025-10-20 08:13:29 - INFO - [Train Stage] Epoch 39 - Loss: 1.5229, Acc: 64.033%, Top-5 Acc: 84.648%, Time: 1014.50s LR: 0.0926157
+2025-10-20 08:13:29 - INFO - [Test Stage] Epoch 40 Stage : Testing STARTS
+2025-10-20 08:14:57 - INFO - [Test Stage] Epoch 40 - Loss: 5.8649, Acc: 64.33%, Top-5 Acc: 86.20%
+2025-10-20 08:14:57 - INFO - Saving checkpoint to checkpoints/resnet50_imagenet_1k_onecycleLr/checkpoint-epoch-38-train_acc-64.03-test_acc-64.33-train_acc5-84.65-test_acc5-86.20.pth
+2025-10-20 08:15:07 - INFO - Starting upload of checkpoint (181.06 MB)
+2025-10-20 08:15:08 - INFO - Model checkpoint upload completed:
+2025-10-20 08:15:08 - INFO - training_log.csv upload completed: 
+2025-10-20 08:15:09 - INFO - test_log.csv upload completed: 
+2025-10-20 08:15:09 - INFO - Log file upload completed: None
+2025-10-20 08:15:09 - INFO - All uploads completed successfully for epoch 38
+2025-10-20 08:15:09 - INFO - Current Epoch 39
