@@ -540,6 +540,24 @@ Key metrics across epochs:
 ---
 
 ### Miss classification Analysis / Confusion
+---
+- True Label "Doberman" is predicted to be Rottweller - identified Dog, but different breed
+- "Ram, tup" was predicted to be "bighorn, bighorn sheep, cimarron, Rocky Mountain bighorn, Rocky Mountain sheep, Ovis canadensis"  - very similar and close 
+- "Wall Clock " was predicted to be "Analog Clock" - very close
+- "Stop Watch" was predicted to be "Analog Clock" - Very close
+- "plastic water bottle" was predicted to be "Water Bottle" - very close
+- "Wok" is predicted to be "mixing bowl" 
+- "dragonfly" is predicted to be "demseflies"
+- "shopping cart" is predicted with "shopping basket"
+- "Garden spider" is predicted with "black and gold garden spider"
+- "night snake" is predicted with "boa snake"
+- "velvet" is predicted with "fur coat"
+- "wombat" is predicted with "mink"
+
+
+Certain images have both labels, either of them are predicted
+
+---
 
 ## Model Deployment And Inference Endpoint
 ### Tracing
