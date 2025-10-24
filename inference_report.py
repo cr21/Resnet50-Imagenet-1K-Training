@@ -330,6 +330,12 @@ def main():
             save_path='misclassified_report.png',
             use_gradcam=True
         )
+        plot_misclassified_images(
+            misclassified_data, 
+            classes, 
+            save_path='misclassified_report_no_gradcam.png',
+            use_gradcam=False
+        )
         
         # Save individual images
         save_individual_misclassified_images(misclassified_data, classes)
