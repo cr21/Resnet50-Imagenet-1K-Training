@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-print(plt.style.available)
+
 # Read CSV files
 train_df = pd.read_csv('logs/resnet50_imagenet_1k_onecycleLr/csv_logger/training_log.csv')
 test_df = pd.read_csv('logs/resnet50_imagenet_1k_onecycleLr/csv_logger/test_log.csv')
@@ -40,5 +40,5 @@ ax3.grid(True)
 
 # Adjust layout and save
 plt.tight_layout()
-plt.savefig('training_metrics.png')
+plt.savefig('static/training_metrics.png')
 plt.close()
