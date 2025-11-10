@@ -1,4 +1,15 @@
 # Resnet50-Imagenet1K Training from scratch on AWS
+<div align="center">
+
+**Training ResNet-50 from scratch using Distributed Data Parallel (DDP) and fine-tuning to achieve 75.11% top-1 accuracy on ImageNet-1K**
+
+<p align="center">
+  <a href="https://ckh4t2xwr7eicid3qpwxowwipq0ohxmf.lambda-url.us-east-1.on.aws/">
+    <img src="https://img.shields.io/badge/🚀%20Try%20It%20Live-Click%20Here-brightgreen?style=for-the-badge" alt="Try Live Demo"/>
+  </a>
+</p>
+
+</div>
 
 - This is attempt to train Resnet50 Model from scratch using Resnet 50 Model  on Imagenet 1000 classes
 - Imagenet 1000 classes is a dataset of 1.2 million train images with 1000 classes, 50000 validation images with 1000 classes and 100000 test images with 1000 classes. Dataset total size is around 160 GB.
@@ -370,6 +381,7 @@ class Config:
 
 ```
 ## Training Results
+![training progress](./static/training_progress.png)
 ![training_metrics](./static/training_metrics.png)
 
 ## Training Progress
@@ -577,18 +589,21 @@ graph(%self.1 : __torch__.model.ResNet50Wrapper,
   return (%3001)
 ```
 
-## Gradio UI
-- The model deployed on Hugging Space at: [Resnet50ImageClassifier ](https://huggingface.co/spaces/crpatel/Resnet50ImageClassifier)
+## AWS Lambda Serverless inference
+- The model is deployed using aws lambda. Checkout [aws-lambda-serverless-deployment-imagenet](https://github.com/cr21/imagenet-1k-restnet-aws-lambda-serverless-deployment) Github repo for detailed overview.
+- Model is deployed on lambda, [aws lambda endpoint](https://ckh4t2xwr7eicid3qpwxowwipq0ohxmf.lambda-url.us-east-1.on.aws/)
+- Model is  also deployed on Hugging Space at: [Resnet50ImageClassifier ](https://huggingface.co/spaces/crpatel/Resnet50ImageClassifier)
+
 
 
 ## Example Inferences
 
 Here are some example classifications from the deployed model:
 
-![Lobster Classification](static/lobster_inference.png)
-![Lobster blue Classification](static/blue_lobster_inference.png)
-![kangaroo Classification](static/kangaroo_inference.png)
-![crab  Classification](static/crab.png)
+![Turtle Classification](static/turtle_aws.png)
+![Lobster Classification](static/lobster_aws.png)
+![kangaroo Classification](static/kangaroo_aws.png)
+
 
 
 
